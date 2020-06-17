@@ -1,6 +1,6 @@
 version: '3.2'
 services:
-  conduit_api:
+  augen_demo_api:
     build: .
     image: conduit_api:1.0.0
     depends_on:
@@ -8,7 +8,7 @@ services:
     environment:
       PORT: '8080'
       NODE_ENV: 'production'
-      MONGO_DB_URI: 'mongodb://mongo:27017/conduit'
+      MONGO_DB_URI: 'mongodb://mongo:27017/augen_demo'
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/api/status"]
       interval: 10m
